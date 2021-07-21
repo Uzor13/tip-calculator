@@ -15,7 +15,6 @@ const Body = () => {
 
     useEffect(() => {
         totalAmount()
-        custom()
     }, [billValue, peopleValue, tipAmount, buttonTipValue])
 
     const fivePercent = () => {

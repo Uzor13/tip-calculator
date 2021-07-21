@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button, ButtonContainer, CustomInputForm} from "../style";
 
 const Buttons = ({value, setValue, five, ten, fifteen, twentyFive, fifty, custom}) => {
@@ -6,6 +6,10 @@ const Buttons = ({value, setValue, five, ten, fifteen, twentyFive, fifty, custom
     const handleOnChange = e => {
         setValue(e.target.value)
     }
+
+    useEffect(() => {
+        custom()
+    }, [value])
 
     return (
         <ButtonContainer>
